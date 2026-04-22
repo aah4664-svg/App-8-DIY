@@ -35,6 +35,10 @@
 <head>
     
 Alex window.onload = function() {
+ var fileInput = document.getElementByld('fileInput');
+ var messageDisplayArea = document.getElementByld('messageDisplayArea');
+ var resultArea = document.getElementById('resultArea');
+
 
 
 // --- START DIAGNOSTIC MATH ---
