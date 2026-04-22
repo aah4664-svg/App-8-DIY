@@ -72,11 +72,40 @@ Alex window.onload = function() {
 
 
 // --- START DIAGNOSTIC MATH ---
+// --- START DIAGNOSTIC MATH ---
+var totalRed = 0;
+var totalGreen =0;
 
+for (var i = 0; i < data.length; i +=4){
+   /*Sums up Red*/
+   totalRed += data{i};
+   /*Sums up Green*/
+   totalGreen += data[i+1];
 
+//Isolated green to see the positive signal
+   /*This codes to remove the red and blue*/
+   data[i]=0;
+   data[i+2] = 0;
+}
+   context2.putImageData(imageData, 0, 0);
 
-
-
+//If Green is greater than 85% of Red, we will call it Positive (Yellow)
+    if (totalGreen > (totalRed * 0.85)) {
+       resultArea.innerHTML="<h2 style='color:orange;'>ANALYSIS: POSITIVE
+(YELLOW)</h2>";
+              } else {
+                resultArea.innerHTML = "<h2 style='color:red;'>ANALYSIS: NEGATIVE (PINK)</h2>";
+              }
+              messageDisplayArea.innerHTML = "Analysis Complete!";
+            };
+            img.src = reader.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    };
+  </script>
+</head>
 
 
 
