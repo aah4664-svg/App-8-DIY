@@ -58,7 +58,7 @@
       ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh / ratio);
     }
     
-Alex window.onload = function() {
+window.onload = function() {
  var fileInput = document.getElementByld('fileInput');
  var messageDisplayArea = document.getElementByld('messageDisplayArea');
  var resultArea = document.getElementById('resultArea');
