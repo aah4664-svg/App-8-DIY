@@ -70,6 +70,16 @@ Alex window.onload = function() {
     var img = new Image();
     img.onload = function() {
 
+     // 1. Draw Original Image
+     var canvas = document.getElementById('myCanvas');
+     var context = canvas.getContext("2d");
+     drawImageIOSFix(context, img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+
+     // 2. Draw Analysis Image
+     var canvas2 = document.getElementById('dataCanvas');
+     var context2 = canvas2.getContext("2d");
+     drawImageIOSFix(context2, img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+
 
 // --- START DIAGNOSTIC MATH ---
 // --- START DIAGNOSTIC MATH ---
