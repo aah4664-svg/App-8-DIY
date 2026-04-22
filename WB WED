@@ -20,11 +20,10 @@
   Author 5: Alexander Rogers
   
   References:
-  http://docs.webplatform.org/wiki/concepts/programming/drawing_images_onto_canvas#Loading_the_image_programmatically
-  http://www.html5rocks.com/en/tutorials/file/dndfiles/
-  http://www.w3.org/TR/FileAPI/
-  http://mobilehtml5.org/
-  http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
+  https://thewebdev.info/2022/01/27/how-to-get-pixel-color-from-an-image-with-javascript/?utm_source=chatgpt.com
+  https://www.w3schools.com/html/html5_canvas.asp
+  https://www.geeksforgeeks.org/javascript/how-to-get-pixel-from-html-canvas/?utm_source=chatgpt.com
+
   
   Brief Description of Goal of Code:
   The goal of this code is to create a functional diagnostic tool that performs image analysis by isolating specific color data. The app allows a user to capture or upload a photo, which is then rendered on two separate canvases: one displaying the original image and a second displaying a transformed version where red and green pixel intensities are removed. 
