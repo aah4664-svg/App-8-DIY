@@ -59,8 +59,8 @@
     }
     
 window.onload = function() {
- var fileInput = document.getElementByld('fileInput');
- var messageDisplayArea = document.getElementByld('messageDisplayArea');
+ var fileInput = document.getElementById('fileInput');
+ var messageDisplayArea = document.getElementById('messageDisplayArea');
  var resultArea = document.getElementById('resultArea');
 
  fileInput.addEventListener('change', function(e) {
@@ -92,7 +92,7 @@ var totalGreen =0;
 
 for (var i = 0; i < data.length; i +=4){
    /*Sums up Red*/
-   totalRed += data{i};
+   totalRed += data[i];
    /*Sums up Green*/
    totalGreen += data[i+1];
 
@@ -105,8 +105,7 @@ for (var i = 0; i < data.length; i +=4){
 
 //If Green is greater than 85% of Red, we will call it Positive (Yellow)
     if (totalGreen > (totalRed * 0.85)) {
-       resultArea.innerHTML="<h2 style='color:orange;'>ANALYSIS: POSITIVE
-(YELLOW)</h2>";
+       resultArea.innerHTML="<h2 style='color:orange;'>ANALYSIS: POSITIVE(YELLOW)</h2>";
               } else {
                 resultArea.innerHTML = "<h2 style='color:red;'>ANALYSIS: NEGATIVE (PINK)</h2>";
               }
