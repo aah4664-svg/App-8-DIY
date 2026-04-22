@@ -33,6 +33,29 @@
 -->
 
 <head>
+  <meta charset="utf-8">
+  <title>LAMP Diagnostic Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=.7">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+  <script>
+    // Critical fix for iPhone "squashed" photos
+    function drawImageIOSFix(ctx, img, sx, sy, sw, sh, dx, dy, dw, dh) {
+      var canvas = document.createElement('canvas');
+      canvas.width = 1; canvas.height = img.naturalHeight;
+      var tctx = canvas.getContext('2d');
+      tctx.drawImage(img, 0, 0);
+      var data = tctx.getImageData(0, 0, 1, img.naturalHeight).data;
+      var sy_f = 0, ey = img.naturalHeight, py = img.naturalHeight;
+      while (py > sy_f) {
+        if (data[(py - 1) * 4 + 3] === 0) { ey = py; } else { sy_f = py; }
+        py = (ey + sy_f) >> 1;
+      }
+      var ratio = (py / img.naturalHeight) || 1;
+      ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh / ratio);
+    }
     
 Alex window.onload = function() {
  var fileInput = document.getElementByld('fileInput');
