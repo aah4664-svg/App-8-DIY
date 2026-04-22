@@ -32,6 +32,22 @@
   Some images may appear rotated or flipped depending on the metadata of the original file and how the browser interprets the image's "orientation" tag.
 -->
 
+<head>
+    
+Alex window.onload = function() {
+
+
+// --- START DIAGNOSTIC MATH ---
+
+
+
+
+
+
+
+
+
+
 
  <body>
   <div data-role="page">
