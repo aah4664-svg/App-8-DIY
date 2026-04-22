@@ -32,7 +32,7 @@ References:
   The goal of this code is to create a functional diagnostic tool that performs image analysis by isolating specific color data. The app allows a user to capture or upload a photo, which is then rendered on two separate canvases: one displaying the original image and a second displaying a transformed version where red and green pixel intensities are removed. 
   Known Issues:
   Some images may appear rotated or flipped depending on the metadata of the original file and how the browser interprets the image's "orientation" tag.
--->
+--!>
 
  <head>
   <meta charset="utf-8">
